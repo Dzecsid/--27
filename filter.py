@@ -7,7 +7,7 @@ def get_average(arr):
 
 
 def draw_mosaic_pixel(color):
-    for   ainrange(i, i + mosaic_size):
+    for a in range(i, i + mosaic_size):
         for b in range(j, j + mosaic_size):
             img_array[a][b] = [color, color, color]
 
