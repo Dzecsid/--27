@@ -3,10 +3,21 @@ import numpy as np
 
 
 def get_average(arr):
+    """
+    Возвращает среднее сумм цветов каждого пикселя на участке arr с шагом в mosaic_size
+
+    :param arr: ndarray
+    :return: int
+    """
     return int(np.sum(arr) / 3 // (mosaic_size ** 2))
 
 
 def draw_mosaic_pixel(color):
+    """
+    Рисует мозаику поверх старого изображения и выводит его в другой файл
+
+    :param color: int
+    """
     for a in range(i, i + mosaic_size):
         for b in range(j, j + mosaic_size):
             img_array[a][b] = [color, color, color]
