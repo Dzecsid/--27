@@ -13,19 +13,16 @@ def draw_mosaic_pixel(color):
 
 
 print('Введите название загружаемого изображения:')
-input_image_name = input()
-
+input_image_name = "img2.jpg"
 
 img = Image.open(input_image_name)
 img_array = np.array(img)
 width, height = img.size
 
 print('Введите размер мозаики:')
-mosaic_size = int(input())
-
+mosaic_size = 10
 print('Введите шаг серого:')
-graduation = int(input())
-
+graduation = 50
 
 #растягиваю или сжимаю изображение, чтобы оно соответсвовало целому числу пикселей мозайки
 if width % mosaic_size != 0 or height % mosaic_size != 0:
@@ -40,8 +37,7 @@ for i in range(0, height, mosaic_size):
         draw_mosaic_pixel(int(average // graduation) * graduation)
 
 print('Введите название выгружаемого изображения:')
-output_image_name = input()
-
+output_image_name = "result.jpg"
 
 res = Image.fromarray(img_array)
 res.save(output_image_name)
