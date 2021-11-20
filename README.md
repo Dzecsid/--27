@@ -25,3 +25,7 @@ filter_with_filename.py
 После 
 
 ![img_1.png](img_1.png)
+
+DocTest
+
+![img_5.png](img_5.png)
